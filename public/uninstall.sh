@@ -1,0 +1,1 @@
+echo "Pretending to uninstall"
