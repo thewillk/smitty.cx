@@ -17,21 +17,21 @@ sw_vers -productName
 if [ "$(sw_vers -productName)" != "Mac OS X" ]
     echo "Where am I? What am I doing here?" >&2
     echo "Try again on a Mac OS machine..." >&2
-    exit exit 1
+    exit 1
 fi
 
 # Check if apple script
 if [ "$(which osascript)" == "" ]
     echo "Apple scripting?!" >&2
     echo "Yeah, Smitty needs it." >&2
-    exit exit 1
+    exit 1
 fi
 
 # Check if action script and ruby exist
 if [ "$(which ruby)" == "" ]
     echo "Really, you uninstalled ruby?" >&2
     echo "That was a bad move, my friend." >&2
-    exit exit 1
+    exit 1
 fi
 
 echo "Grab a beverage while Smitty installs..."
