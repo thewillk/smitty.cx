@@ -13,8 +13,9 @@ THEMES_ROOT="$SMITTY_ROOT/themes"
 
 # Check if Smitty is already installed
 # Check that OS is macos, version doens't matter
-sw_vers -productName
+
 if [ "$(sw_vers -productName)" != "Mac OS X" ]
+then
     echo "Where am I? What am I doing here?" >&2
     echo "Try again on a Mac OS machine..." >&2
     exit 1
@@ -22,6 +23,7 @@ fi
 
 # Check if apple script
 if [ "$(which osascript)" == "" ]
+then
     echo "Apple scripting?!" >&2
     echo "Yeah, Smitty needs it." >&2
     exit 1
@@ -29,6 +31,7 @@ fi
 
 # Check if action script and ruby exist
 if [ "$(which ruby)" == "" ]
+then
     echo "Really, you uninstalled ruby?" >&2
     echo "That was a bad move, my friend." >&2
     exit 1
@@ -36,8 +39,8 @@ fi
 
 echo "Grab a beverage while Smitty installs..."
 
-mkdir "SMITTY_ROOT"
-mkdir "THEMES_ROOT"
+mkdir "$SMITTY_ROOT"
+mkdir "$THEMES_ROOT"
 
 echo "Fetching helper scripts..."
 
