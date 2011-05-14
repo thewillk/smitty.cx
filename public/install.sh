@@ -37,6 +37,15 @@ then
     exit 1
 fi
 
+# Check for .smitty directory
+if [ -d "$SMITTY_ROOT" ]
+then
+    echo "Smitty is awesome!" >&2
+    echo "But please, only install it once." >&2
+    echo "To uninstall: curl unget.smitty.cx | sh" >&2
+    exit 1
+fi
+
 echo "Grab a beverage while Smitty installs..."
 
 mkdir "$SMITTY_ROOT"
