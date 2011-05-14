@@ -21,6 +21,8 @@ fi
 
 ruby "$SMITTY_ROOT/set_default_theme.rb" "Homebrew"
 
+# NEED TO WRITE A THEME UNINSTALLER SCRIPT
+
 rm -Rf "$SMITTY_ROOT"
 
 echo "Uninstallation sucessful."
