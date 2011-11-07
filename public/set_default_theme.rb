@@ -1,5 +1,8 @@
 #!/usr/bin/ruby
 
-theme = ARGV[0]
+require '~/.smitty/smitty.rb'
 
-`osascript -e 'tell application "Terminal" to set default settings to first settings set whose name is "#{theme}"'`
+theme_name = ARGV[0]
+terminal = Smitty::Terminal.new
+
+terminal.set_default_theme! theme_name
