@@ -1,13 +1,9 @@
 #!/usr/bin/ruby
 
-theme = ARGV[0]
+require '~/.smitty/smitty.rb'
 
-# THERE'S GOTTA BE A BETTER WAY....
+theme_path = ARGV[0]
+terminal = Smitty::Terminal.new
+terminal.install_theme! theme_path
 
-`open #{theme}`
-
-sleep 0.5
-
-`osascript -e 'tell application "Terminal" to close the first window'`
-
-puts "Installed "+theme
+puts "Installed "+theme_path
