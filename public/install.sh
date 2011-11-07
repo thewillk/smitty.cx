@@ -53,6 +53,7 @@ mkdir "$THEMES_ROOT"
 
 echo "Fetching helper scripts..."
 
+curl -s smitty.cx/smitty.rb > "$SMITTY_ROOT/smitty.rb"
 curl -s smitty.cx/rotate.rb > "$SMITTY_ROOT/rotate.rb"
 chmod +x "$SMITTY_ROOT/rotate.rb"
 curl -s smitty.cx/install_theme.rb > "$SMITTY_ROOT/install_theme.rb"
