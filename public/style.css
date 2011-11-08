@@ -52,10 +52,12 @@ h1 {
     margin-bottom: 10px;
 }
 .container {
-    width: 600px;
+    width: 620px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 .screenshot {
