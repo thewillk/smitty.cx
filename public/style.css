@@ -1,0 +1,27 @@
+.container {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.screenshot {
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.cfix:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.cfix:after { clear: both; }
+.cfix { zoom: 1; }
+
+pre {
+    padding: 20px;
+    border: 1px solid #dedede;
+    margin-bottom: 30px;
+    background: #f0f0f0;
+}
